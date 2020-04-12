@@ -5,7 +5,7 @@ const Author = require("../models/authors"); //getting the Author table from dat
 
 router.get("/", async (req, res) => {
   let searchOptions = {};
-  if (req.query.name != null && req.queryname !== " ") {
+  if (req.query.name != null && req.query.name !== " ") {
     searchOptions.name = new RegExp(req.query.name, "i"); //regular expressuon i means case insensitive
   }
   try {
@@ -28,6 +28,7 @@ router.post("/", async (req, res) => {
   const author = new Author({
     name: req.body.name,
   });
+
   //handling input errors.
 
   try {

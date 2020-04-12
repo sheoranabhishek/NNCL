@@ -1,0 +1,8 @@
+<h2>New Book</h2>
+<form action="/books" method="POST" enctype="multipart/form-data">
+  <!-- this is used after multer installing. 
+  this tell that form can be used on multiple platforms to save data. -->
+  <%- include('form_fields') %>
+  <a href="/books">Cancel</a>
+  <button type="submit">Create</button>
+</form>
