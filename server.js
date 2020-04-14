@@ -9,7 +9,9 @@ const bodyParser = require("body-parser");
 const authorRouter = require("./routes/authors");
 const indexRouter = require("./routes/index");
 const bookRouter = require("./routes/books");
+const methodOverride = require("method-override");
 
+app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
